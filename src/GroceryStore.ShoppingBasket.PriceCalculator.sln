@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryStore.ShoppingBasket.PriceCalculator.Lib", "GroceryStore.ShoppingBasket.PriceCalculator.Lib\GroceryStore.ShoppingBasket.PriceCalculator.Lib.csproj", "{1B186CD4-39D4-44C9-A20A-7A3C57382ABB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryStore.ShoppingBasket.PriceCalculator.Console", "GroceryStore.ShoppingBasket.PriceCalculator.Console\GroceryStore.ShoppingBasket.PriceCalculator.Console.csproj", "{47A56252-CF9B-4766-9949-F04B9751D508}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryStore.ShoppingBasket.PriceCalculator.AcceptanceTests", "GroceryStore.ShoppingBasket.PriceCalculator.AcceptanceTests\GroceryStore.ShoppingBasket.PriceCalculator.AcceptanceTests.csproj", "{685FFBE0-A296-4E8E-94C6-FDAF09015174}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B186CD4-39D4-44C9-A20A-7A3C57382ABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B186CD4-39D4-44C9-A20A-7A3C57382ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B186CD4-39D4-44C9-A20A-7A3C57382ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B186CD4-39D4-44C9-A20A-7A3C57382ABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47A56252-CF9B-4766-9949-F04B9751D508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47A56252-CF9B-4766-9949-F04B9751D508}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47A56252-CF9B-4766-9949-F04B9751D508}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47A56252-CF9B-4766-9949-F04B9751D508}.Release|Any CPU.Build.0 = Release|Any CPU
+		{685FFBE0-A296-4E8E-94C6-FDAF09015174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{685FFBE0-A296-4E8E-94C6-FDAF09015174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{685FFBE0-A296-4E8E-94C6-FDAF09015174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{685FFBE0-A296-4E8E-94C6-FDAF09015174}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
