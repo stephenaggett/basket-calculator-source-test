@@ -1,0 +1,22 @@
+[
+  {
+    "description": "Beans",
+    "unitOfMeasurement": "can",
+    "gbpPrice": 0.65
+  },
+  {
+    "description": "Bread",
+    "unitOfMeasurement": "loaf",
+    "gbpPrice": 0.8
+  },
+  {
+    "description": "Milk",
+    "unitOfMeasurement": "bottle",
+    "gbpPrice": 1.3
+  },
+  {
+    "description": "Apples",
+    "unitOfMeasurement": "bag",
+    "gbpPrice": 1
+  }
+]

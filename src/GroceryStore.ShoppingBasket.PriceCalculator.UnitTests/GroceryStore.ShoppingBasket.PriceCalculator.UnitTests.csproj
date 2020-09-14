@@ -20,10 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="Resources\all-goods-for-sale.json">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
-      <None Update="Resources\all-offers.json">
+      <None Update="Resources\two-goods-for-sale.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
     </ItemGroup>
