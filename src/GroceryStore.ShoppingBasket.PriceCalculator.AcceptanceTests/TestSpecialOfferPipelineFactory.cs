@@ -1,16 +1,12 @@
 using System;
+using GroceryStore.ShoppingBasket.PriceCalculator.Lib.SpecialOffers;
 
-namespace GroceryStore.ShoppingBasket.PriceCalculator.Lib.SpecialOffers
+namespace GroceryStore.ShoppingBasket.PriceCalculator.AcceptanceTests
 {
-    public interface ISpecialOfferPipelineFactory
-    {
-        ISpecialOfferPipeline Default { get; }
-    }
-
     /// <summary>
-    /// This factory could be enhanced to read offer details from a repository.
+    /// This is the same as the production SpecialOfferPipelineFactory except the apples offer does not expire.
     /// </summary>
-    public class SpecialOfferPipelineFactory : ISpecialOfferPipelineFactory
+    public class TestSpecialOfferPipelineFactory : ISpecialOfferPipelineFactory
     {
         private static readonly ISpecialOfferPipeline _default =
             new SpecialOfferPipeline(new[]{
@@ -25,7 +21,7 @@ namespace GroceryStore.ShoppingBasket.PriceCalculator.Lib.SpecialOffers
         {
             return new TimeLimitedPercentageDiscountSpecialOffer("Apples", 
                 new DateTime(2020, 9, 14).ToUniversalTime(),
-                new DateTime(2020, 9, 20).ToUniversalTime(), 
+                new DateTime(2099, 9, 20).ToUniversalTime(), 
                 0.1m);
         }
 

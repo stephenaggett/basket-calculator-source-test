@@ -1,8 +1,8 @@
 using System;
 using System.Linq;
-using GroceryStore.ShoppingBasket.PriceCalculator.Lib.Basket;
+using GroceryStore.ShoppingBasket.PriceCalculator.Lib.SpecialOffers;
 
-namespace GroceryStore.ShoppingBasket.PriceCalculator.Lib
+namespace GroceryStore.ShoppingBasket.PriceCalculator.Lib.Basket
 {
     public interface IBasketCostCalculator
     {
@@ -36,7 +36,7 @@ namespace GroceryStore.ShoppingBasket.PriceCalculator.Lib
                 .Select(i => allGoods.Single(g => g.Name.Equals(i, StringComparison.OrdinalIgnoreCase)))
                 .ToArray();
             var subTotal = chosenGoods.Select(cg => cg.GbpPrice).Sum();
-            var appliedOffers = _specialOfferPipeline.Process(new Basket.Basket(){CheckoutDateUtc = DateTime.UtcNow, Goods = chosenGoods});
+            var appliedOffers = _specialOfferPipeline.Process(new Basket(){CheckoutDateUtc = DateTime.UtcNow, Goods = chosenGoods});
             return new BasketCost()
             {
                 SubTotal = subTotal, 

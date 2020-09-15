@@ -1,7 +1,6 @@
 using System.Linq;
-using GroceryStore.ShoppingBasket.PriceCalculator.Lib.SpecialOffers;
 
-namespace GroceryStore.ShoppingBasket.PriceCalculator.Lib
+namespace GroceryStore.ShoppingBasket.PriceCalculator.Lib.SpecialOffers
 {
     public interface ISpecialOfferPipeline
     {
