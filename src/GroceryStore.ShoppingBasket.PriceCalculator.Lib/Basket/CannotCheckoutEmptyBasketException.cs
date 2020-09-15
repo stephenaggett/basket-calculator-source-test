@@ -1,6 +1,6 @@
 using System;
 
-namespace GroceryStore.ShoppingBasket.PriceCalculator.Lib
+namespace GroceryStore.ShoppingBasket.PriceCalculator.Lib.Basket
 {
     public class CannotCheckoutEmptyBasketException : Exception
     {

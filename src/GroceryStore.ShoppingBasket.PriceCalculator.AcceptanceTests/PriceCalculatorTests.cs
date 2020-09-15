@@ -2,6 +2,7 @@ using System.IO;
 using System.Reflection;
 using FluentAssertions;
 using GroceryStore.ShoppingBasket.PriceCalculator.Lib;
+using GroceryStore.ShoppingBasket.PriceCalculator.Lib.Basket;
 using GroceryStore.ShoppingBasket.PriceCalculator.Lib.Config;
 using Moq;
 using Xunit;
@@ -43,7 +44,7 @@ Total: £2.60");
         private static IPriceCalculator GivenAPriceCalculator()
         {
             var configSettings = CreateConfigSettings();
-            var basketCostCalculator = new BasketCostCalculator(new GoodRepository(configSettings), new SpecialOfferPipelineFactory().Default);
+            var basketCostCalculator = new BasketCostCalculator(new GoodRepository(configSettings), new TestSpecialOfferPipelineFactory().Default);
             return new Lib.PriceCalculator(basketCostCalculator, new ReceiptWriter());
         }
 

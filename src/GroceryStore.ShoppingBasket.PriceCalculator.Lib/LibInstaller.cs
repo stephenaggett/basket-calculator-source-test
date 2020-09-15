@@ -1,6 +1,7 @@
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
+using GroceryStore.ShoppingBasket.PriceCalculator.Lib.SpecialOffers;
 
 namespace GroceryStore.ShoppingBasket.PriceCalculator.Lib
 {

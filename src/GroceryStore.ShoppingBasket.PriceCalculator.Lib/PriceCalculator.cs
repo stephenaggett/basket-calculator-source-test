@@ -1,3 +1,5 @@
+using GroceryStore.ShoppingBasket.PriceCalculator.Lib.Basket;
+
 namespace GroceryStore.ShoppingBasket.PriceCalculator.Lib
 {
     public interface IPriceCalculator
