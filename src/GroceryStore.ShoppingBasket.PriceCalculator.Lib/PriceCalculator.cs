@@ -1,21 +1,25 @@
-using System;
-
 namespace GroceryStore.ShoppingBasket.PriceCalculator.Lib
 {
-    public class PriceCalculator
+    public interface IPriceCalculator
     {
-        private readonly IGoodRepository _goodRepository;
-        private readonly ISpecialOfferRepository _specialOfferRepository;
+        string Checkout(params string[] itemsInBasket);
+    }
 
-        public PriceCalculator(IGoodRepository goodRepository, ISpecialOfferRepository specialOfferRepository)
+    public class PriceCalculator : IPriceCalculator
+    {
+        private readonly IBasketCostCalculator _basketCostCalculator;
+        private readonly IReceiptWriter _receiptWriter;
+
+        public PriceCalculator(IBasketCostCalculator basketCostCalculator, IReceiptWriter receiptWriter)
         {
-            _goodRepository = goodRepository;
-            _specialOfferRepository = specialOfferRepository;
+            _basketCostCalculator = basketCostCalculator;
+            _receiptWriter = receiptWriter;
         }
 
-        public string PriceBasket(params string[] itemsInBasket)
+        public string Checkout(params string[] itemsInBasket)
         {
-            throw new NotImplementedException();
+            var basketCost = _basketCostCalculator.CalculateCost(itemsInBasket);
+            return _receiptWriter.WriteFor(basketCost);
         }
     }
 }

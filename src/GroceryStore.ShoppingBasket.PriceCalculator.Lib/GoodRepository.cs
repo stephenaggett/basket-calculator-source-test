@@ -1,13 +1,13 @@
 using System.IO;
-using System.Threading.Tasks;
-using GroceryStore.ShoppingBasket.PriceCalculator.Lib.Domain;
+using GroceryStore.ShoppingBasket.PriceCalculator.Lib.Basket;
+using GroceryStore.ShoppingBasket.PriceCalculator.Lib.Config;
 using Newtonsoft.Json;
 
 namespace GroceryStore.ShoppingBasket.PriceCalculator.Lib
 {
     public interface IGoodRepository
     {
-        Task<Good[]> GetAllAsync();
+        Good[] GetAll();
     }
 
     public class GoodRepository : IGoodRepository
@@ -19,10 +19,10 @@ namespace GroceryStore.ShoppingBasket.PriceCalculator.Lib
             _configSettings = configSettings;
         }
 
-        public async Task<Good[]> GetAllAsync()
+        public Good[] GetAll()
         {
-            return JsonConvert.DeserializeObject<Good[]>(
-                await File.ReadAllTextAsync(_configSettings.AllGoodsForSaleJsonPath));
+            var json = File.ReadAllText(_configSettings.AllGoodsForSaleJsonPath);
+            return JsonConvert.DeserializeObject<Good[]>(json);
         }
     }
 }

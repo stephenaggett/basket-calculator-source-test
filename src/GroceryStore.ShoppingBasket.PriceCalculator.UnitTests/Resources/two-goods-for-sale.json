@@ -1,11 +1,11 @@
 [
   {
-    "description": "Beans",
+    "name": "Beans",
     "unitOfMeasurement": "can",
     "gbpPrice": 0.65
   },
   {
-    "description": "Bread",
+    "name": "Bread",
     "unitOfMeasurement": "loaf",
     "gbpPrice": 0.8
   }
